@@ -15,22 +15,23 @@ const UserSchema = new mongoose.Schema(
       max: 50,
       unique: true,
     },
+    rollNumber:{
+      type: String,
+      required: true,
+      min: 6,
+    },
     password: {
       type: String,
       required: true,
       min: 6,
     },
-    desc: {
-      type: String,
-      max: 50,
-    },
-    diseases:{
-      type: String,
-    },
-    bloodGroup:{
-      type: String,
+    numberArray: {
+      type: Array,
       required: true,
-      max: 2
+    },
+    alphabetArray:{
+      type: Array,
+      required: true,
     }
   },
   { timestamps: true }

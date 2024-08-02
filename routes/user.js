@@ -46,6 +46,7 @@ router.get("/:id", async (req, res) => {
   } catch (err) {
     res.status(500).json(err);
   }
+  router.post("")
 });
 
 module.exports = router;
