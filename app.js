@@ -8,7 +8,7 @@ const userRoute = require("./routes/user");
 const authRoute = require("./routes/auth");
 
 const mongodb = require("mongodb")
-dotenv.config({path: "./vars/.env"});
+dotenv.config();
 const User = require("./models/User");
 mongoose.connect(
   process.env.MONGO_URL,
