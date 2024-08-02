@@ -6,8 +6,9 @@ const helmet = require("helmet");
 const morgan = require("morgan");
 const userRoute = require("./routes/user");
 const authRoute = require("./routes/auth");
-
+const cors= require("cors")
 const mongodb = require("mongodb")
+app.use(cors());
 dotenv.config();
 const User = require("./models/User");
 mongoose.connect(
