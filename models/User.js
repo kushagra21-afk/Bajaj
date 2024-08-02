@@ -17,7 +17,6 @@ const UserSchema = new mongoose.Schema(
     },
     rollNumber:{
       type: String,
-      required: true,
       min: 6,
       unique: true,
     },
@@ -29,12 +28,10 @@ const UserSchema = new mongoose.Schema(
     },
     numberArray: {
       type: Array,
-      required: true,
       unique: true,
     },
     alphabetArray:{
       type: Array,
-      required: true,
       unique: true,
     }
   },
