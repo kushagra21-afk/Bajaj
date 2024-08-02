@@ -46,7 +46,21 @@ router.get("/:id", async (req, res) => {
   } catch (err) {
     res.status(500).json(err);
   }
-  router.post("")
+
+});
+router.post("/bfhl", async (req, res) => {
+  try {
+    if(req.body.dose === req.body.times.length){
+      await user.updateOne({ $set: req.body });
+      res.status(200).json("the medicine has been updated");
+    }
+    else{
+      res.status(403).json("please enter the correct no. of dossage");
+    }
+    
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
 
 module.exports = router;

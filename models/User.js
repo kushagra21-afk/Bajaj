@@ -19,19 +19,23 @@ const UserSchema = new mongoose.Schema(
       type: String,
       required: true,
       min: 6,
+      unique: true,
     },
     password: {
       type: String,
       required: true,
       min: 6,
+      unique: true,
     },
     numberArray: {
       type: Array,
       required: true,
+      unique: true,
     },
     alphabetArray:{
       type: Array,
       required: true,
+      unique: true,
     }
   },
   { timestamps: true }
