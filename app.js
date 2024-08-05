@@ -6,9 +6,10 @@ const helmet = require("helmet");
 const morgan = require("morgan");
 const userRoute = require("./routes/user");
 const authRoute = require("./routes/auth");
-
+const cors= require("cors")
 const mongodb = require("mongodb")
-dotenv.config({path: "./vars/.env"});
+app.use(cors());
+dotenv.config();
 const User = require("./models/User");
 mongoose.connect(
   process.env.MONGO_URL,
@@ -25,6 +26,6 @@ app.use(morgan("common"));
 app.use("/api/auth", authRoute);
 app.use("/api/user", userRoute);
 
-app.listen(8800, () => {
+app.listen(8000, () => {
   console.log("Backend server is running!");
 });
