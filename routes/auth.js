@@ -13,6 +13,8 @@ router.post("/register", async (req, res) => {
       email: req.body.email,
       password: hashedPassword,
       rollNumber: req.body.rollNumber,
+      numberArray: req.body.arr,
+      alphabetArray: req.body.arr2,
     });
 
     const user = await newUser.save();
