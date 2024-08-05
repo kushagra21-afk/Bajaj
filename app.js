@@ -42,6 +42,9 @@ app.use(express.json());
 app.use(helmet());
 app.use(morgan("common"));
 //routes
+app.head("/", (req, res) => {
+  res.status(200).send(); // Respond with headers only
+});
 app.use("/api/auth", authRoute);
 app.use("/api/user", userRoute);
 
