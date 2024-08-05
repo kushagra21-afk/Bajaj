@@ -18,21 +18,17 @@ const UserSchema = new mongoose.Schema(
     rollNumber:{
       type: String,
       min: 6,
-      unique: true,
     },
     password: {
       type: String,
       required: true,
       min: 6,
-      unique: true,
     },
     numberArray: {
       type: Array,
-      unique: true,
     },
     alphabetArray:{
       type: Array,
-      unique: true,
     }
   },
   { timestamps: true }
