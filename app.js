@@ -47,7 +47,7 @@ app.head("/", (req, res) => {
 });
 app.use("/api/auth", authRoute);
 app.use("/api/user", userRoute);
-
+console.log("Mongo URL:", process.env.MONGO_URL);
 app.listen(process.env.PORT || 8000, () => {
   console.log("Backend server is running!");
 });
