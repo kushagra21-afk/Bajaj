@@ -45,6 +45,6 @@ app.use(morgan("common"));
 app.use("/api/auth", authRoute);
 app.use("/api/user", userRoute);
 
-app.listen(8000, () => {
+app.listen(process.env.PORT || 8000;, () => {
   console.log("Backend server is running!");
 });
